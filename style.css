@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #1f2f1a;
+  color: #fefae0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Header */
+.header {
+  background-image: linear-gradient(
+    to right bottom, 
+    rgba(40, 54, 24, 0.795), 
+    rgba(0, 0, 0, 0.51)),
+  url(img/Nighthawks1942.jpg);
+  background-position: bottom;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 10px;
+}
+
+.title-primary {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  letter-spacing: 10px;
+  padding-bottom: 10px;
+  animation: moveRight 2s ease-out;
+}
+
+.title-sub {
+  font-weight: 400;
+  letter-spacing: 10px;
+  animation: moveLeft 2s ease-out;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.header a {
+  text-transform: uppercase;
+  animation: appear 3s ease-out;
+  box-shadow: 0 0 5px 2px #606c38;
+}
+
+.header a:active {
+  animation: clickBtn 2s ease-in 1;
+}
+
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveRight{
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes clickBtn {
+  0% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Tribute Info */
+#tribute-info {
+  padding: 0;
+}
+
+#tribute-text {
+  flex: 2;
+}
+
+#tribute-img {
+  flex: 1;
+  background: url('img/EdHopper-photo.jpg') no-repeat center center/cover;
+}
+
+/* Quote */
+.quote-section {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote {
+  height: 100%;
+  max-width: 768px;
+  width: auto;  
+}
+
+/* Early Life */
+#sailing {
+  background: url('img/1911sailing.jpg') no-repeat center center/cover;
+}
+
+/* Urban Life: Cinema */
+#cinema {
+  background: url('img/1939NYMovie.jpg') no-repeat center center/cover;
+}
+
+/* Urban Life: Women Work */
+#women-work {
+  background: none;
+  text-align: end;
+}
+
+#apt-houses {
+  background: url('img/1923apartmentHouses.jpg') no-repeat center center/cover;
+}
+
+#table-ladies {
+  background: url('img/1930TablesForLadies.jpg') no-repeat center center/cover;
+}
+
+
+
+@media (max-width: 576px) {
+  #tribute-info, 
+  #early-life {
+    flex-direction: column;
+  }
+
+  .section-box {
+    max-width: 70%;
+}
+}
+
+
