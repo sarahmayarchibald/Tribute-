@@ -111,20 +111,6 @@ body {
   }
 }
 
-/* Tribute Info */
-#tribute-info {
-  padding: 0;
-}
-
-#tribute-text {
-  flex: 2;
-}
-
-#tribute-img {
-  flex: 1;
-  background: url('img/EdHopper-photo.jpg') no-repeat center center/cover;
-}
-
 /* Quote */
 .quote-section {
   font-family: 'Playfair Display', serif;
@@ -139,44 +125,93 @@ body {
 #quote {
   height: 100%;
   max-width: 768px;
-  width: auto;  
+  width: auto; 
 }
 
 /* Early Life */
-#sailing {
-  background: url('img/1911sailing.jpg') no-repeat center center/cover;
+#early-life .column-2 {
+  order: 1;
 }
 
 /* Urban Life: Cinema */
 #cinema {
-  background: url('img/1939NYMovie.jpg') no-repeat center center/cover;
+  background: url('img/1939NYMovie.jpg') no-repeat top center/cover;
 }
 
-/* Urban Life: Women Work */
-#women-work {
-  background: none;
-  text-align: end;
+/* Rural America */
+#rural-america {
+  background: url('img/1955southCarolinaMorning.jpeg') no-repeat top center/cover;
 }
 
-#apt-houses {
-  background: url('img/1923apartmentHouses.jpg') no-repeat center center/cover;
+/* Links */
+#links .column-1,
+#links .column-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#table-ladies {
-  background: url('img/1930TablesForLadies.jpg') no-repeat center center/cover;
+#links .column-2 {
+  padding: 25px;
+    text-align: justify;
 }
 
+#links h3 {
+  padding-bottom: 15px;
+}
 
+#links img {
+  padding-bottom: 20px;
+  height: 306px;
+}
+
+#links a {
+  box-shadow: 0 0 5px 2px #606c38;
+}
+
+#links a:active {
+  animation: clickBtn 2s ease-in 1;
+}
+
+/* Self Portrait */
+#selfPortrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#selfPortrait #img-div {
+  text-align: center;
+  width: 375px;
+}
+
+#selfPortrait img {
+  height: 500px;
+  max-width: 97%;
+  padding: 15px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 0.6rem;
+  padding: 30px 0 10px;
+}
 
 @media (max-width: 576px) {
-  #tribute-info, 
-  #early-life {
+  /* Rural America */
+  #rural-img img {
+    width: 90%;
+    margin: calc(10% / 2);
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  #links .row {
     flex-direction: column;
   }
-
-  .section-box {
-    max-width: 70%;
+  
 }
-}
-
-
