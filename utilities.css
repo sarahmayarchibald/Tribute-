@@ -25,6 +25,7 @@ h2 {
     border: none;
     padding: 15px 20px;
     border-radius: 30px;
+    text-transform: uppercase;
 }
 
 .btn-dark {
@@ -32,9 +33,9 @@ h2 {
     color: #fefae0;
 }
 
-.btn-light {
-    background: #fefae0;
-    color: #bc6c25;
+.btn-bright {
+    background: #bc6c25;
+    color: #fefae0;
 }
 
 /* Section */
@@ -82,7 +83,8 @@ h2 {
 
 .section-fill {
     height: 80vh;
-    width: 100%;
+    width: 95%;
+    margin: 30px;
 }
 
 .section-box {
@@ -109,8 +111,14 @@ h2 {
     width: 30%;
     margin: calc(10% / 6);
     object-fit: cover;
+    border: 2px solid #fff;
 }
-  
+
+/* Links */
+.img-caption {
+    padding-bottom: 20px;
+}
+
 @media (max-width: 576px) {
     .row {
       flex-direction: column;
